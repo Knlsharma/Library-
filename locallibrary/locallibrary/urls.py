@@ -5,8 +5,11 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('login' , include('login.urls')) ,
-    path('register' , include('register.urls'))
+    path('home/admin', admin.site.urls),
+    path('home/login' , include('login.urls')) ,
+    path('home/logout' , include('login.urls')) ,
+    path('home/register' , include('register.urls')) , 
+    path('home' , include('management.urls')) , 
+    path('book/', include('employee_register.urls'))
 ]
 

@@ -12,10 +12,14 @@ def index(request):
 
         if user is not None:
              auth.login(request,user)
-             return redirect('/') 
+             return redirect('/book') 
         else:
              messages.info(request, 'Invalid User')  
              return redirect('/login') 
 
     else:
-        return render(request , "index.html")
+        return render(request , "index.html") 
+
+def logout(request):
+    auth.logout(request)
+    redirect('/')       
