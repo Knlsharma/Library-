@@ -1,6 +1,7 @@
 from django.shortcuts import render , redirect
 from django.contrib.auth.models import User , auth
 from django.contrib import messages
+from django.contrib.auth import logout
 
 # Create your views here.
 def index(request):
@@ -12,7 +13,7 @@ def index(request):
 
         if user is not None:
              auth.login(request,user)
-             return redirect('/book') 
+             return redirect('/home') 
         else:
              messages.info(request, 'Invalid User')  
              return redirect('/login') 
@@ -20,6 +21,6 @@ def index(request):
     else:
         return render(request , "index.html") 
 
-def logout(request):
-    auth.logout(request)
-    redirect('/')       
+def signout(request):
+    logout(request)
+    return render(request ,"home.html")      

@@ -1,504 +1,296 @@
 {% load static %}	
 	
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="{% static 'home/img/fav.png ' % }">
-		<!-- Author Meta -->
-		<meta name="author" content="codepixer">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Book</title>
+<!DOCTYPE html>
+<html lang="en">
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" type="text/css" href="{% static 'css/linearicons.css' % }">
-			<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' % }">
-			<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' % }">
-			<link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' % }">
-			<link rel="stylesheet" type="text/css" href="{% static 'css/nice-select.css' % }">					
-			<link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' % }">
-			<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' % }">
-			<link rel="stylesheet" type="text/css" href="{% static 'home/css/main.css' % }">
-		</head>
-		<body>
+<head>
 
-			  <header id="header" id="home">
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="{% static 'home/img/logo.png ' % }" alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="">Home</a></li>
-				          
-						  
-						  
-						     {% if user.is_authenticated %}
-						 <li> Hello , {{user.username}}</li>
-						  <li><a href="home/logout">Log Out</a></li>
-						  <li><a href="home/admin">Admin Dashboard</a></li>
-						  
-						  {% else %}
-					  <li><a href="home/login">Log In</a></li>
-					  <li><a href="home/register">Sign Up</a></li>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-					     {% endif %}
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-				              <li><a href="generic.html">Generic</a></li>
-				              <li><a href="elements.html">Elements</a></li>
-				            </ul>
-				          </li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
+  <title>Welcome</title>
 
+  <!-- Font Awesome Icons -->
+  <link href="{% static 'home/vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet" type="text/css">
 
-			<!-- start banner Area -->
-			<section class="banner-area" id="home">	
-				<div class="container">
-					<div class="row fullscreen d-flex align-items-center justify-content-start">
-						<div class="banner-content col-lg-7">
-							<h5 class="text-white text-uppercase">Author: Travor James</h5>
-							<h1 class="text-uppercase">
-								New Adventure				
-							</h1>
-							<p class="text-white pt-20 pb-20">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br> or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-							</p>
-							<a href="#" class="primary-btn text-uppercase">Buy Now for $9.99</a>
-						</div>
-						<div class="col-lg-5 banner-right">
-							<img class="img-fluid" src="{% static 'img/header-img.png ' % }" alt="">
-						</div>												
-					</div>
-				</div>
-			</section>
-			<!-- End banner Area -->	
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-			<!-- Start about Area -->
-			<section class="section-gap info-area" id="about">
-				<div class="container">				
-					<div class="single-info row mt-40 align-items-center">
-						<div class="col-lg-6 col-md-12 text-center no-padding info-left">
-							<div class="info-thumb">
-								<img src="{% static 'home/img/about-img.jpg ' % }" class="img-fluid info-img" alt="">
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-12 no-padding info-rigth">
-							<div class="info-content">
-								<h2 class="pb-30">Dr. Travor James</h2>
-								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women.								
-								</p>
-								<br>
-								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women.									
-								</p>
-								<br>
-								<img src="{% static 'home/img/signature.png" alt="">
-								</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End about Area -->
-		
-			<!-- Start fact Area -->
-			<section class="fact-area relative section-gap" id="fact">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-40 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Some Features that Made us Unique</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>						
-				</div>	
-			</section>
-			<!-- End fact Area -->
-			
-			<!-- Start counter Area -->
-			<section class="counter-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-3 col-md-6">
-							<div class="single-counter">
-								<h1 class="counter">2536</h1>
-								<p>Happy Clients</p>								
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-counter">
-								<h1 class="counter">6784</h1>
-								<p>Total Projects</p>								
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-counter">
-								<h1 class="counter">1059</h1>
-								<p>Cups Coffee</p>								
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-counter">
-								<h1 class="counter">12239</h1>
-								<p>Tickets Submitted</p>								
-							</div>
-						</div>												
-					</div>
-				</div>	
-			</section>
-			<!-- end counter Area -->
-			
-			<!-- Start price Area -->
-			<section class="price-area section-gap" id="price">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Purchase whatever you want</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-price no-padding">
-								<div class="price-top">
-									<h4>PDF</h4>
-								</div>
-								<p>
-									Who are in extremely love with <br>
-									eco friendly system.
-								</p>
-								<div class="price-bottom">
-									<h1><span>$</span> 79.99</h1>
-									<a href="#" class="primary-btn header-btn">Purchase Now</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-price no-padding">
-								<div class="price-top">
-									<h4>E-Book</h4>
-								</div>
-								<p>
-									Who are in extremely love with <br>
-									eco friendly system.
-								</p>
-								<div class="price-bottom">
-									<h1><span>$</span> 99.99</h1>
-									<a href="#" class="primary-btn header-btn">Purchase Now</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-price no-padding">
-								<div class="price-top">
-									<h4>Print Copy</h4>
-								</div>
-								<p>
-									Who are in extremely love with <br>
-									eco friendly system.
-								</p>
-								<div class="price-bottom">
-									<h1><span>$</span> 59.99</h1>
-									<a href="#" class="primary-btn">Purchase Now</a>
-								</div>
-							</div>				
-						</div>								
-					</div>
-				</div>	
-			</section>
-			<!-- End price Area -->
-			
-			<!-- Start course Area -->
-			<section class="course-area section-gap" id="course">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-9">
-							<div class="title text-center">
-								<h1 class="mb-10">Top Courses That are open for Students</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row">
-						<div class="active-course-carusel">
-							<div class="single-course item">
-								<img class="img-fluid" src=" {% static 'home/img/c1.jpg" alt="">
-								<p class="sale-btn">For Sale</p>
-								<div class="details">
-									<a href="#"><h4>Breakthrough Thinking <span class="price float-right">$25</span></h4></a>	
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-									</p>
-								</div>
-							</div>
-							<div class="single-course item">
-								<img class="img-fluid" src=" {% static 'home/img/c2.jpg" alt="">
-								<p class="sale-btn">For Sale</p>
-								<div class="details">
-									<a href="#"><h4>Breakthrough Thinking <span class="price float-right">$25</span></h4></a>	
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-									</p>
-								</div>
-							</div>
-							<div class="single-course item">
-								<img class="img-fluid" src=" {% static 'home/img/c3.jpg" alt="">
-								<p class="sale-btn">For Sale</p>
-								<div class="details">
-									<a href="#"><h4>Breakthrough Thinking <span class="price float-right">$25</span></h4></a>	
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-									</p>
-								</div>
-							</div>								
-						</div>											
-					</div>
-				</div>	
-			</section>
-			<!-- End course Area -->
-			
-			<!-- Start call-to-action Area -->
-			<section class="call-to-action-area section-gap">
-				<div class="container">
-					<div class="row justify-content-center top">
-						<div class="col-lg-12">
-							<h1 class="text-white text-center">Download Our App for all Platforms</h1>
-							<p class="text-white text-center mt-30">
-								It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights so far as its popularity and technological advancement are concerned.
-							</p>							
-						</div>
-					</div>
-					<div class="row justify-content-center d-flex">	
-						<div class="download-button d-flex flex-row justify-content-center mt-30">		
-							<div class="buttons flex-row d-flex">
-								<i class="fa fa-apple" aria-hidden="true"></i>
-								<div class="desc">
-									<a href="#">
-										<p>
-											<span>Available</span> <br>
-											on App Store
-										</p>
-									</a>
-								</div>
-							</div>
-							<div class="buttons flex-row d-flex">
-								<i class="fa fa-android" aria-hidden="true"></i>
-								<div class="desc">
-									<a href="#">
-										<p>
-											<span>Available</span> <br>
-											on Play Store
-										</p>
-									</a>
-								</div>
-							</div>
-						</div>						
-					</div>
-				</div>	
-			</section>
-			<!-- End call-to-action Area -->
+  <!-- Plugin CSS -->
+  <link href="{% static 'home/vendor/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
 
-			<!-- Start testomial Area -->
-			<section class="testomial-area section-gap">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">What our Reader’s Say about us</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row">
-						<div class="active-tstimonial-carusel">
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="{% static 'home/img/t1.png ' % } " alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t2.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t3.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>	
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t1.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t2.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t3.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>															
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="{% static 'home/img/t1.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t2.png' % } " alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src=" {% static 'home/img/t3.png ' % }" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>														
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End testomial Area -->
-			
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="{% static 'home/css/creative.min.css'%}" rel="stylesheet">
 
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-5 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>About Us</h6>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
-								</p>
-								<p class="footer-text">
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-5  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
+</head>
 
-										<div class="info"></div>
-									</form>
-								</div>
-							</div>
-						</div>						
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
-					</div>
-				</div>
-			</footer>	
-			<!-- End footer Area -->	
+<body id="page-top">
 
-			<script type="text/javascript" src=" {% static 'home/js/vendor/jquery-2.2.4.min.js' % } "></script>
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script type="text/javascript" src=" {% static 'home/js/vendor/bootstrap.min.js' % } "></script>			
-			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script type="text/javascript" src=" {% static 'home/js/easing.min.js' % } "></script>			
-			<script type="text/javascript" src=" {% static 'home/js/hoverIntent.js' % } "></script>
-			<script type="text/javascript" src=" {% static 'home/js/superfish.min.js' % } "></script>	
-			<script type="text/javascript" src=" {% static 'home/js/jquery.ajaxchimp.min.js' % } "></script>
-			<script type="text/javascript" src=" {% static 'home/js/jquery.magnific-popup.min.js' % } "></script>	
-			<script type="text/javascript" src=" {% static 'home/js/owl.carousel.min.js' % } "></script>			
-			<script type="text/javascript" src=" {% static 'home/js/jquery.sticky.js' % } "></script>
-			<script type="text/javascript" src=" {% static 'home/js/jquery.nice-select.min.js' % } "></script>			
-			<script type="text/javascript" src=" {% static 'home/js/parallax.min.js' % } "></script>	
-			<script type="text/javascript" src=" {% static 'home/js/waypoints.min.js' % } "></script>
-			<script type="text/javascript" src=" {% static 'home/js/jquery.counterup.min.js' % } "></script>			
-			<script type="text/javascript" src=" {% static 'home/js/mail-script.js' % } "></script>	
-			<script type="text/javascript" src=" {% static 'home/js/main.js' % } "></script>	
-		</body>
-	</html>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+		{% if user.is_authenticated %}
+	  <a class="navbar-brand js-scroll-trigger" href="#page-top">Hi,{{user.username}}</a>
+	  	{% endif %}
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="http://127.0.0.1:8000/home">Home</a>
+		  </li>
+		  
+		  {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="home/admin">Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="home/book">Add Book</a>
+		  </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="home/login/signout">Log Out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Feedback</a>
+		  </li>
+
+		  {% else %}
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="home/login">Log In</a>
+		  </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="home/register">Sign Up</a>
+		  </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Feedback</a>
+		  </li>
+		  
+		  {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+		  </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">Welcome To The New Era Of Book Management !</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">Lets Begin !</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="home/admin">Admin Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="page-section bg-primary" id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">We've got what you need!</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4">Want to add book go ahead !</p>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="home/book">Add Book</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="page-section" id="services">
+    <div class="container">
+      <h2 class="text-center mt-0">At Your Service</h2>
+      <hr class="divider my-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Statistics</h3>
+            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Up to Date</h3>
+            <p class="text-muted mb-0">Code as a Service.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Ready to Publish</h3>
+            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Made with Love</h3>
+            <p class="text-muted mb-0">Want to Give a Rating?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
+
+     <!-- Portfolio Section -->
+<!--
+	 <section id="portfolio">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="{% static 'home/img/portfolio/fullsize/1.jpg'%}">
+            <img class="img-fluid" src="{% static 'home/img/portfolio/thumbnails/1.jpg'%}" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="{% static 'home/img/portfolio/fullsize/2.jpg'%}">
+            <img class="img-fluid" src="{% static 'home/img/portfolio/thumbnails/2.jpg'%}" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="{% static 'home/img/portfolio/fullsize/3.jpg'%}">
+            <img class="img-fluid" src="{% static 'home/img/portfolio/thumbnails/3.jpg'%}" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="{% static 'home/img/portfolio/fullsize/4.jpg'%}">
+            <img class="img-fluid" src="{% static 'home/img/portfolio/thumbnails/4.jpg'%}" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="{% static 'home/img/portfolio/fullsize/5.jpg'%}">
+            <img class="img-fluid" src="{% static 'home/img/portfolio/thumbnails/5.jpg'%}" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="{% static 'home/img/portfolio/fullsize/6.jpg'%}">
+            <img class="img-fluid" src="{% static 'home/img/portfolio/thumbnails/6.jpg'%}" alt="">
+            <div class="portfolio-box-caption p-3">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+
+
+  <!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Easy Log Out!</h2>
+      <a class="btn btn-light btn-xl" href="home/logout">Log Out</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5"> Give us a call or send us an email and we will get back to you as soon as possible!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div>+1 (202) 555-0149</div>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+          <!-- Make sure to change the email address in anchor text AND the link below! -->
+          <a class="d-block" href="mailto:contact@yourwebsite.com">Kunal678@admin.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Library Management System</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'home/vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'home/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'home/vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+  <script src="{% static 'home/vendor/magnific-popup/jquery.magnific-popup.min.js'%}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'home/js/creative.min.js'%}"></script>
+
+</body>
+
+</html>

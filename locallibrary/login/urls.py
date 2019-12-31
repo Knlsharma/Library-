@@ -7,7 +7,7 @@ from . import views
 urlpatterns = [
 
     path('' , views.index, name = 'index') ,
-    path('' , views.logout , name = 'logout' )
+    path('/signout' , views.signout , name = 'signout' )
 ]
 
  

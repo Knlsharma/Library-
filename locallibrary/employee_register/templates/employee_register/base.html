@@ -28,9 +28,13 @@
                 
                   </div>
                 
+                  {% if user.is_authenticated %}
+
                 <hr class="my-4">
                 {% block content %}
                 {% endblock content %}
+
+                {% endif %}
                
                 
             </div>
