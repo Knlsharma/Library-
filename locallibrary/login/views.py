@@ -23,4 +23,4 @@ def index(request):
 
 def signout(request):
     logout(request)
-    return render(request ,"home.html")      
+    return redirect('/home/login')    

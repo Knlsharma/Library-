@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'management',
     'employee_register' ,
-    'crispy_forms'
+    'crispy_forms' , 
+    'register' ,
+    'input_respurce' 
     
-]
+    ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -81,13 +83,26 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+
+    'default': 
+    {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'library',
         'USER': 'root',
         'PASSWORD' : 'root' ,
-        'HOST': 'localhost'
-    }
+        'HOST': 'localhost' ,
+        'PORT':'3306'
+    } ,
+
+    'student_meta': 
+    {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'student',
+        'USER': 'root',
+        'PASSWORD' : 'root' ,
+        'HOST': 'localhost' , 
+        'PORT':'3306'
+    } 
 }
 
 
@@ -111,6 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LOGOUT_REDIRECT_URL='home'
+LOGIN_URL = '/login'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -124,6 +140,20 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+DATABASE_ROUTERS = ['path.router.router.SecondaryRouter']
+
+DATABASE_APPS_MAPPING = { 
+                     'contenttypes': 'default',
+                     'auth': 'default',
+                     'admin': 'default',
+                     'sessions': 'default',
+                     'messages': 'default',
+                     'staticfiles': 'default'
+                     ,'student_meta': 'student' 
+                     }
+
 
 
 # Static files (CSS, JavaScript, Images)

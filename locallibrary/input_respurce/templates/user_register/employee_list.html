@@ -1,0 +1,43 @@
+{% extends "user_register/base.html" %}
+
+
+{% block content %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Name</td>
+            <td> User name</td>
+            <td>Roll no.</td>
+            <td>Avg marks</td>
+            <td>Ph no.</td>
+
+            <!--
+            <td>
+                <a href="{% url 'employee_insert' %}" class="btn btn-outline-success">
+                    <i class="fas fa-plus"></i> Don't touch
+                </a>
+            </td>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in employee_list %}
+            <tr>
+                <td>{{employee.Uname}}</td>
+                <td>{{employee.Sname}}</td>
+                <td>{{employee.Rollno}}</td>
+                <td>{{employee.Avgmarks}}</td>
+                <td>{{employee.Phno}}</td>
+                <td>
+                    
+                    <form action="{% url 'employee_delete' employee.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
