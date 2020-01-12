@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-@login_required
+
 def user_list(request):
     context = {'employee_list': student_data.objects.using('student_meta').all()}
     return render(request, "user_register/employee_list.html", context)
