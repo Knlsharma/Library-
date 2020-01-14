@@ -2,7 +2,20 @@
 
 
 {% block content %}
-<table class="table table-borderless">
+  
+
+<div class="topnav">
+    <div class="search-container">
+      <form action="">
+        <input type="text" placeholder="Enter Author Name.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <br>
+
+<table #myTable tr class="table table-borderless">
     <thead class="border-bottom font-weight-bold">
         <tr>
             <td>Book Name</td>
@@ -17,7 +30,7 @@
             </td>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
         {% for employee in employee_list %}
             <tr>
                 <td>{{employee.Bookname}}</td>

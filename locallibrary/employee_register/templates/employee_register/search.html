@@ -1,0 +1,79 @@
+
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+
+
+
+ <form class="add_your_class" method="get" action="" > 
+  <input class="add_your_class" type="search" name="search"> 
+  <button class="add_your_class" type="submit"> Search </button>
+
+</form>
+
+
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold" id="myTable">
+      <tr>
+          <td>Book Name</td>
+          <td>Author Name</td>
+          <td>Subject Name</td>
+          <td>Inventory</td>
+
+          <td>
+              <a href="{% url 'employee_insert' %}" class="btn btn-outline-success">
+                  <i class="fas fa-plus"></i> Add New
+              </a>
+          </td>
+      </tr>
+  </thead>
+
+
+  <tbody >
+      {% for employee in search %}
+          <tr>
+              <td>{{employee.Bookname}}</td>
+              <td>{{employee.Authorname}}</td>
+              <td>{{employee.Subjectname}}</td>
+              <td>{{employee.Inventory}}</td>
+              <td>
+                  <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0">
+                      <i class="far fa-edit fa-lg"></i>
+                  </a>
+                  <form action="{% url 'employee_delete' employee.id %}" method="post" class="d-inline">
+                      {% csrf_token %}
+                      <button type="submit" class="btn">
+                          <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                      </button>
+                  </form>
+              </td>
+          </tr>
+      {% endfor %}
+  </tbody>
+</table>
+
+ <!-- -
+    <nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4">
+    
+       Collapsible content 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <form class="form-inline mr-auto">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2" type="submit">Search</button>
+        </form>
+
+      </div>
+       Collapsible content -
+
+       Navbar brand -
+      <a class="navbar-brand" href="#">Navbar</a>
+
+    </nav>
+-->
+ 
+
+
+
+{% endblock content %}
