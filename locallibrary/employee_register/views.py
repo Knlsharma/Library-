@@ -32,7 +32,7 @@ def employee_form(request, id=0):
             form.save()
         return redirect('/home/book/list')
 
-
+@login_required
 def employee_delete(request,id):
     employee = Employee.objects.get(pk=id)
     employee.delete()
